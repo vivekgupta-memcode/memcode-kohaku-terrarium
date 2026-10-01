@@ -1,5 +1,5 @@
 name: memcode-kohaku-terrarium
-version: "0.1.0"
+version: "0.1.1"
 description: Explicit user memory for KohakuTerrarium through a recall tool and human save command
 framework: ">=2.1.4,<3"
 tools:
@@ -11,4 +11,4 @@ user_commands:
     module: memcode_kohaku_terrarium.commands
     class: MemcodeSaveCommand
 python_dependencies:
-  - memcode-sdk>=2.4.0,<3
+  - memcode-kohaku-terrarium @ git+https://github.com/vivekgupta-memcode/memcode-kohaku-terrarium.git@v0.1.1

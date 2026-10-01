@@ -8,12 +8,17 @@ This package is maintained by MemCode, independently of Kohaku-Lab.
 ## Install
 
 ```bash
-kt install https://github.com/vivekgupta-memcode/memcode-kohaku-terrarium.git@v0.1.0
+kt install https://github.com/vivekgupta-memcode/memcode-kohaku-terrarium.git@v0.1.1
 ```
 
 Requires KohakuTerrarium 2.1.4 or later (below 3). The package declares its
-MemCode SDK dependency in `kohaku.yaml`; the framework makes its module
-importable. With `--deps never`, install `memcode-sdk>=2.4.0,<3` yourself.
+Python distribution as a dependency in `kohaku.yaml`, pinned to this same git
+tag. That installs the module before the framework initializes tools, and pulls
+the MemCode SDK dependency. With `--deps never`, install the distribution yourself:
+
+```bash
+pip install "memcode-kohaku-terrarium @ git+https://github.com/vivekgupta-memcode/memcode-kohaku-terrarium.git@v0.1.1"
+```
 
 ## Configure an isolated user
 

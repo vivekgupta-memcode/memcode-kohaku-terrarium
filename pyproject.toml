@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "memcode-kohaku-terrarium"
-version = "0.1.0"
+version = "0.1.1"
 description = "Explicit MemCode recall and human saves for KohakuTerrarium"
 requires-python = ">=3.10"
 license = "MIT"
