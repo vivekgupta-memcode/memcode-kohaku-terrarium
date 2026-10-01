@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memcode-kohaku-terrarium"
+version = "0.1.0"
+description = "Explicit MemCode recall and human saves for KohakuTerrarium"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = ["memcode-sdk>=2.4.0,<3", "KohakuTerrarium>=2.1.4,<3"]
+
+[tool.setuptools.packages.find]
+include = ["memcode_kohaku_terrarium*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

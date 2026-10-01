@@ -1,0 +1,14 @@
+name: memcode-kohaku-terrarium
+version: "0.1.0"
+description: Explicit user memory for KohakuTerrarium through a recall tool and human save command
+framework: ">=2.1.4,<3"
+tools:
+  - name: memcode_recall
+    module: memcode_kohaku_terrarium.tools
+    class: MemcodeRecallTool
+user_commands:
+  - name: memcode-save
+    module: memcode_kohaku_terrarium.commands
+    class: MemcodeSaveCommand
+python_dependencies:
+  - memcode-sdk>=2.4.0,<3
