@@ -120,12 +120,14 @@ async def test_missing_environment_sends_no_request(monkeypatch):
 
 
 def test_manifest_classes_load_without_credentials_or_network():
-    import importlib
     from pathlib import Path
 
     import yaml
+    from kohakuterrarium.core.loader import ModuleLoader
 
     manifest = yaml.safe_load(Path("kohaku.yaml").read_text())
     for entry in manifest["tools"] + manifest["user_commands"]:
-        cls = getattr(importlib.import_module(entry["module"]), entry["class"])
-        assert cls() is not None
+        assert (
+            ModuleLoader().load_instance(entry["module"], entry["class"], "package")
+            is not None
+        )
